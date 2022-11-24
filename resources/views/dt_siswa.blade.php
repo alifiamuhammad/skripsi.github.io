@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
-   
+    @yield('homes')
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- JavaScript Bundle with Popper -->
@@ -52,7 +52,7 @@
 
                         <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                             <li class="w-100">
-                                <a href="dt_siswa" class="nav-link px-0"> <span class="d-none d-sm-inline">Data Siswa</span>  </a>
+                                <a href="datasiswa" class="nav-link px-0"> <span class="d-none d-sm-inline">Data Siswa</span>  </a>
                             </li>
                             <li>
                                 <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2 </a>
@@ -103,7 +103,40 @@
             </div>
         </div>
         <div class="col py-3">
-          @yield('homes')
+            <div class="card align-self-center gx-5">
+                <div class="card-header ">
+                 <h4>Featured</h4> 
+                </div>
+                <div class="card-body">
+                  <table class="table ">
+                          <thead>
+                            <tr>
+                              <th scope="col">NO</th>
+                              <th scope="col">First</th>
+                              <th scope="col">Last</th>
+                              <th scope="col">Handle</th>
+                              <th scope="col">Handle</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <?php $no=1;?>
+                            @foreach ($data as $item)
+                            <tr>
+                                <td>{{$no++}}</td>
+                              <td >{{$item->NIS}}</td>
+                              <td >{{$item->Nama}}</td>
+                              <td >{{$item->Kelas}}</td>
+                              <td> <ul class="list-inline m-0">
+                                <li class="list-inline-item">
+                                  <a href="detailsiswa" class="btn btn-primary btn-sm rounded-circle" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-info"></i></button>
+                                </li></a>
+                                <li class="list-inline-item">
+                                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                                </li>
+                            </ul></td>
+                            
+                            </tr>
+                            @endforeach
                 </div>
               </div>
         </div>

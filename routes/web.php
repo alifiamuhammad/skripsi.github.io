@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\route_controller;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DataSiswaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('home', [route_controller::class, 'home']);
+Route::get('dt_siswa', [DataSiswaController::class, 'index']);
+Route::get('detailsiswa', [DataSiswaController::class, 'detailsiswa']);
+
