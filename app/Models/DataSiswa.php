@@ -4,10 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Kyslik\ColumnSortable\Sortable;
 
 class DataSiswa extends Model
 {
-    use HasFactory;
+   
+    use HasFactory, Sortable;
+    
     protected $table="data_siswa";
     protected $fillable = [
         'NIS',
@@ -19,4 +22,6 @@ class DataSiswa extends Model
         
 
     ];
+    public $sortable = ['NIS', 'Nama', 'Kelas'];
+   
 }

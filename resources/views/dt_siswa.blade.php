@@ -108,14 +108,29 @@
                  <h4>Featured</h4> 
                 </div>
                 <div class="card-body">
-                  <table class="table ">
-                          <thead>
+                    <div class="row">
+
+                        <div class="col align-self-start">
+                            <a class="btn btn-primary" href="tambah_data_siswa" role="button">Tambah data</a>
+                          </div>
+                          <div class="col-6 col-md-4">
+                            <div class="input-group" style="width: 350px;">
+                            <input type="search" class="form-control rounded"  placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                                <button type="button" class="btn btn-outline-primary">search</button>
+                                </div>
+                          </div>
+                          
+                </div>
+                    
+                    <br>
+                  <table class="table table-bordered  ">
+                    <thead class="thead-dark">
                             <tr>
-                              <th scope="col">NO</th>
-                              <th scope="col">First</th>
-                              <th scope="col">Last</th>
-                              <th scope="col">Handle</th>
-                              <th scope="col">Handle</th>
+                              <th scope="col">No</th>
+                              <th scope="col">@sortablelink('NIS','NIS')</th>
+                              <th scope="col">@sortablelink('Nama')</th>
+                              <th scope="col">@sortablelink('Kelas')</th>
+                              <th scope="col">Action</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -137,6 +152,8 @@
                             
                             </tr>
                             @endforeach
+                        </tbody>
+                        </table>
                 </div>
               </div>
         </div>

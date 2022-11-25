@@ -106,7 +106,7 @@
         </div>
         
         <div class="col py-3">
-            @yield('homes')
+          
         </div>
   
   

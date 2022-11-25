@@ -10,11 +10,11 @@ class DataSiswaController extends Controller
     public function index()
 {
 
-	
-    $posts = DataSiswa::all();
+	$posts = DataSiswa::sortable()->paginate();
+  
     return view('dt_siswa',['data' =>$posts]);
 	
-
+    
 }
 public function detailsiswa(){
     return view('detail_siswa');
