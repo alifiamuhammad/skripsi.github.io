@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('home', [route_controller::class, 'home']);
-Route::get('tambah_data_siswa', [route_controller::class, 'tambah_data_siswa']);
+Route::get('tambah_data_siswa', [DataSiswaController::class, 'tambah_data_siswa']);
 Route::get('dt_siswa', [DataSiswaController::class, 'index']);
 Route::get('detailsiswa', [DataSiswaController::class, 'detailsiswa']);
-
+Route::post('simpan-data-siswa',[DataSiswaController::class,'store']);
