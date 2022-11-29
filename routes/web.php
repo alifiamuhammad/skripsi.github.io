@@ -17,7 +17,7 @@ use App\Http\Controllers\DataSiswaController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('home', [route_controller::class, 'home']);
+Route::get('homes', [route_controller::class, 'home']);
 Route::get('tambah_data_siswa', [DataSiswaController::class, 'tambah_data_siswa']);
 Route::get('detail', [DataSiswaController::class, 'index']);
 Route::get('detailsiswa', [DataSiswaController::class, 'detailsiswa']);
