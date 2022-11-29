@@ -9,14 +9,13 @@ class DataSiswaController extends Controller
 {
     public function index()
 {
-
 	$posts = DataSiswa::sortable()->paginate();
   
     return view('dt_siswa',['data' =>$posts]);
 	
     
 }
-public function detailsiswa(){
+public function detail(){
     return view('detail_siswa');
         }
     
@@ -54,5 +53,10 @@ public function store(Request $request)
                         'between' => 'The :attribute must be between :min - :max.',
                         'in'      => 'The :attribute must be one of the following types: :values',
                     );
-                }        
+                    
+                }  
+                public function edit($id)
+                {
+                  
+                }   
 }

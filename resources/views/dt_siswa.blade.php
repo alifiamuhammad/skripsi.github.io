@@ -143,7 +143,7 @@
                               <td >{{$item->Kelas}}</td>
                               <td> <ul class="list-inline m-0">
                                 <li class="list-inline-item">
-                                  <a href="detailsiswa" class="btn btn-primary btn-sm rounded-circle" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-info"></i></button>
+                                  <a href="/detailsiswa" class="btn btn-primary btn-sm rounded-circle" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-info"></i></button>
                                 </li></a>
                                 <li class="list-inline-item">
                                     <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>

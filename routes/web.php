@@ -22,3 +22,4 @@ Route::get('tambah_data_siswa', [DataSiswaController::class, 'tambah_data_siswa'
 Route::get('dt_siswa', [DataSiswaController::class, 'index']);
 Route::get('detailsiswa', [DataSiswaController::class, 'detailsiswa']);
 Route::post('simpan-data-siswa',[DataSiswaController::class,'store']);
+
