@@ -10,6 +10,9 @@ class route_controller extends Controller
     public function home(){
         return view('home');
             }
+            public function homes(){
+                return view('dd');
+                    }
     
   
 

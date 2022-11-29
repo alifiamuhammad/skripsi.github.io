@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('homes', [route_controller::class, 'home']);
+Route::get('homes', [route_controller::class, 'homes']);
 Route::get('tambah_data_siswa', [DataSiswaController::class, 'tambah_data_siswa']);
 Route::get('detail', [DataSiswaController::class, 'index']);
 Route::get('detailsiswa', [DataSiswaController::class, 'detailsiswa']);
