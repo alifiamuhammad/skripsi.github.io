@@ -15,8 +15,11 @@ class DataSiswaController extends Controller
 	
     
 }
-public function detail(){
-    return view('detail_siswa');
+public function detailsiswa($id){
+
+    return view('detail_siswa',[
+            'post' => DataSiswa::find($id)
+        ]);
         }
     
 public function tambah_data_siswa(){

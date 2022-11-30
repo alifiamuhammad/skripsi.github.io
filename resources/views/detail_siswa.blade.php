@@ -9,22 +9,23 @@
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="...">
                 </div>
-
+              
                 <div class="mb-3 col">
+                 
                     <label for="formGroupExampleInput" class="form-label">Example label</label>
                     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
                     <br>
                     <label for="formGroupExampleInput" class="form-label">Example label</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                    <input type="text" class="form-control" value="{{$post->NIS}}" id="formGroupExampleInput" placeholder="Example input placeholder">
                     <br>
                     <label for="formGroupExampleInput" class="form-label">Example label</label>
                     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
                     <br>
-                    <label for="formGroupExampleInput" class="form-label">Example label</label>
+                    <label for="formGroupExampleInput" class="form-label"></label>
                     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
                 </div>
                  
-                    
+            
                   </div>
     </div>
   </div>
