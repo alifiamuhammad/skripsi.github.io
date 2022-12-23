@@ -58,7 +58,7 @@ public function store(Request $request)
                     );
                     
                 }  
-                public function edit($id)
+                public function editdatasiswa($id)
                 {
                   
                 }   
