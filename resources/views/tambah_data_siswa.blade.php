@@ -5,10 +5,10 @@
     <div class="card-body">
           <form form action="{{url('simpan-data-siswa')}}" method="POST" enctype="multipart/form-data">
             @csrf
-          <div class="form-group" style="width: 50%;">
-            <label for="NIS">NIS</label>
-            <input type="number" class="form-control" id="NIS" name="NIS" aria-describedby="NIS" placeholder="Masukan NIS">
-          </div>
+            <div class="form-group" style="width: 50%;">
+              <label for="NIS">NIS</label>
+              <input type="number" class="form-control" maxlength="10" id="NIS" name="NIS" aria-describedby="NIS" placeholder="Masukan NIS" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;">
+            </div>
           <br>
         <div class="form-group" style="width: 50%;">
             <label for="Nama">Nama</label>

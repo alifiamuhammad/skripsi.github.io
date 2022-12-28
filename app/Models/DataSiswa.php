@@ -11,7 +11,8 @@ class DataSiswa extends Model
    
     use HasFactory, Sortable;
     
-    protected $table="data_siswa";
+    protected $table="datasiswa";
+    protected $primaryKey="id";
     protected $fillable = [
         'NIS',
         'Nama',
