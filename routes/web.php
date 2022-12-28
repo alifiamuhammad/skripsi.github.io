@@ -3,6 +3,7 @@
 use App\Http\Controllers\route_controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataSiswaController;
+use App\Http\Controllers\auth_controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,10 +18,10 @@ use App\Http\Controllers\DataSiswaController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('home', [route_controller::class, 'home']);
+Route::get('home1', [route_controller::class, 'home']);
 Route::get('homes', [route_controller::class, 'homes']);
 Route::get('tambah_data_siswa', [DataSiswaController::class, 'tambah_data_siswa']);
 Route::get('dt_siswa', [DataSiswaController::class, 'index']);
 Route::get('detailsiswa/{id}', [DataSiswaController::class, 'detailsiswa']);
 Route::post('simpan-data-siswa',[DataSiswaController::class,'store']);
-
+Route::post('proses_login',[auth_controller::class,'proses_login']);
