@@ -12,6 +12,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<div class="form-group" style="width: 50%;">
+    <label for="NIS">NIS</label>
+    <input type="number" class="form-control" maxlength="10" id="NIS" name="NIS" aria-describedby="NIS" placeholder="Masukan NIS" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;">
+  </div>
+  <br>
 <nav class="navbar navbar-dark bg-secondary">
     <div class="container-fluid">
       <a class="navbar-brand" href="home">Navbar</a>
