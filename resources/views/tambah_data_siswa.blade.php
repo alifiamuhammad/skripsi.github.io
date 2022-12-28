@@ -7,7 +7,7 @@
             @csrf
           <div class="form-group" style="width: 50%;">
             <label for="NIS">NIS</label>
-            <input type="text" class="form-control" id="NIS" name="NIS" aria-describedby="NIS" placeholder="Masukan NIS">
+            <input type="number" class="form-control" id="NIS" name="NIS" aria-describedby="NIS" placeholder="Masukan NIS">
           </div>
           <br>
         <div class="form-group" style="width: 50%;">
