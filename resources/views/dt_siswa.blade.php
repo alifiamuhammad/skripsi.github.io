@@ -14,7 +14,7 @@
 </head>
 <nav class="navbar navbar-dark bg-secondary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="home">Navbar</a>
+      <a class="navbar-brand" href="home1">Navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">  <span class="navbar-toggler-icon"></span></button>
     </div>
     <div class="offcanvas offcanvas-end bg-dark" style="width: 250px;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasExampleLabel">
@@ -143,7 +143,7 @@
                               <td >{{$item->Kelas}}</td>
                               <td> <ul class="list-inline m-0">
                                 <li class="list-inline-item">
-                                  <a href="/detailsiswa/{{$item->id}}" class="btn btn-primary btn-sm rounded-circle" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-info"></i></button>
+                                  <a href="detailsiswa{{$item->id}}" class="btn btn-primary btn-sm rounded-circle" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-info"></i></button>
                                 </li></a>
                                 <li class="list-inline-item">
                                     <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>

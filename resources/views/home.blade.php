@@ -15,7 +15,7 @@
 
 <nav class="navbar navbar-dark bg-secondary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="home">Navbar</a>
+      <a class="navbar-brand" href="home1">Navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">  <span class="navbar-toggler-icon"></span></button>
     </div>
     <div class="offcanvas offcanvas-end bg-dark" style="width: 250px;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasExampleLabel">

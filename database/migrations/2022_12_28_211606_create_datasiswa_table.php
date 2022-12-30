@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('Kelas');
             $table->string('Email');
             $table->string('password');
+            $table->string('level');
             $table->string('NoHP');
             $table->timestamps();
         });

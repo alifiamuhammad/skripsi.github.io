@@ -19,9 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('home1', [route_controller::class, 'home']);
-Route::get('homes', [route_controller::class, 'homes']);
+Route::get('home2', [route_controller::class, 'homes']);
 Route::get('tambah_data_siswa', [DataSiswaController::class, 'tambah_data_siswa']);
 Route::get('dt_siswa', [DataSiswaController::class, 'index']);
-Route::get('detailsiswa/{id}', [DataSiswaController::class, 'detailsiswa']);
+Route::get('detailsiswa{id}', [DataSiswaController::class, 'detailsiswa']);
 Route::post('simpan-data-siswa',[DataSiswaController::class,'store']);
 Route::post('proses_login',[auth_controller::class,'proses_login']);
