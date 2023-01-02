@@ -22,7 +22,7 @@ class DataSiswa extends Model
         'Kelas',
         'Email',
         'NoHP',
-        'Password',
+        'password',
         'level',
         'Alamat',
         

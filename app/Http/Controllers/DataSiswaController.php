@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\DataSiswa;
-
+use Illuminate\Support\Facades\Hash;
 class DataSiswaController extends Controller
 {
     public function index()
@@ -43,6 +43,7 @@ public function store(Request $request)
                         'Alamat' => $request->Alamat,
                         'Kelas' => $request->Kelas,
                         'Email' => $request->Email,
+                        'password' => Hash::make($request['password']),
                         'NoHP' => $request->NoHP,
                         
                     ]);

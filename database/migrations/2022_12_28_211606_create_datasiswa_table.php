@@ -20,8 +20,7 @@ return new class extends Migration
             $table->string('Alamat');
             $table->string('Kelas');
             $table->string('Email');
-            $table->string('password');
-            $table->string('level')->default('siswa');
+           
             $table->string('NoHP');
             $table->timestamps();
         });
