@@ -70,7 +70,7 @@ return [
         ],
         'Datasiswa' => [
             'driver' => 'eloquent',
-            'model'  => App\DataSiswa::class,
+            'model'  => App\Models\DataSiswa::class,
         ],
 
         // 'users' => [
