@@ -44,6 +44,10 @@ return [
             'driver'  => 'session',
             'provider' => 'datasiswa',
           ],
+          'user'  => [
+            'driver'  => 'session',
+            'provider' => 'users',
+          ],
     ],
 
     /*
