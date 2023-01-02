@@ -14,10 +14,10 @@ class auth_controller extends Controller
                 'NIS' =>' required',
                 'password' => 'required',
             ]);
-            if(Auth::guard('datasiswa')->attempt(['NIS' => $NIS, 'password' => $password])){
+            if(Auth::guard('datasiswa')->attempt(['NIS' => $request->NIS, 'password' => $request->password])){
                 return  redirect('home2');
-            }elseif(Auth::guard('user')->attempt(['username' => $username, 'password' => $password])){
-                 return redirect('home1');
+            }elseif(Auth::guard('user')->attempt(['username' => $request->username, 'password' => $request->password])){
+                return return redirect('home1');
             }
            
            
