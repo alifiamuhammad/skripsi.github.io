@@ -49,6 +49,14 @@
             <div class="text-danger alert-danger">{{ $message }}</div>
         @enderror
           </div>
+
+            <div class="form-group" style="width: 50%;">
+              <label for="NoHP">password</label>
+          <input type="password" class="form-control" id="password" placeholder="password" name="password" aria-describedby="password">
+     <span class="input-group-btn" id="eyeSlash">
+       <button class="btn btn-default reveal" onclick="visibility3()" type="button"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
+     </span>
+    </div>
           <br>
           <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
           
@@ -56,4 +64,19 @@
        
     </div>
   </div>
+  <script>
+    
+    function visibility3() {
+var x = document.getElementById('password');
+if (x.type === 'password') {
+  x.type = "text";
+  $('#eyeShow').show();
+  $('#eyeSlash').hide();
+}else {
+  x.type = "password";
+  $('#eyeShow').hide();
+  $('#eyeSlash').show();
+}
+}
+</script>
 @endsection
