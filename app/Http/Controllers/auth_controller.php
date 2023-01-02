@@ -11,19 +11,17 @@ class auth_controller extends Controller
     
         request()->validate(
             [
-                'username' =>' required',
+                'NIS' =>' required',
                 'password' => 'required',
             ]);
-            $kredensil = $request->only('username' , 'password');
-            if(Auth::attempt($kredensil)){
-                $user= Auth::user();
-            if($user->level == 'admin'){
-                return redirect()->intended('home1')->with('alert-success', 'You are now logged in as admin.');
-            }else if($user->level == 'siswa'){
-                    return redirect()->intended('home2');
+            if(Auth::guard('datasiswa')->attempt(['NIS' => $NIS, 'password' => $password])){
+                return  redirect('home2');
+            }elseif(Auth::guard('user')->attempt(['username' => $username, 'password' => $password])){
+                 return redirect('home1');
             }
-            return redirect()->intended('/');
-        }
+           
+           
+        
         return redirect('/')
         ->withInput()
         ->withErrors(['login_gagal' => 'Username atau Password anda salah']);
