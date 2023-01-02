@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'Datasiswa'  => [
+            'driver'  => 'session',
+            'provider' => 'datasiswa',
+          ],
     ],
 
     /*
@@ -63,6 +67,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'Datasiswa' => [
+            'driver' => 'eloquent',
+            'model'  => App\DataSiswa::class,
         ],
 
         // 'users' => [
