@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 use Kyslik\ColumnSortable\Sortable;
 
-class DataSiswa extends Model
+class DataSiswa extends  Authenticatable
 {
    
     use HasFactory, Sortable;

@@ -72,11 +72,11 @@
                                                 <input
                                                     class="form-control py-4"
                                                     id="inputEmailAddress"
-                                                    name="username"
+                                                    name="NIS"
                                                     type="text"
                                                     placeholder="Masukkan Username"/>
-                                                @if($errors->has('username'))
-                                                <span style="color: red" >{{ $errors->first('username') }}</span>
+                                                @if($errors->has('NIS'))
+                                                <span style="color: red" >{{ $errors->first('NIS') }}</span>
                                                 @endif
                                             </div>
                                             <div class="form-group">

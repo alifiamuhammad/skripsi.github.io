@@ -40,7 +40,7 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'Datasiswa'  => [
+        'datasiswa'  => [
             'driver'  => 'session',
             'provider' => 'datasiswa',
           ],
@@ -72,11 +72,11 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-        'Datasiswa' => [
+        'datasiswa' => [
             'driver' => 'eloquent',
             'model'  => App\Models\DataSiswa::class,
         ],
-
+        
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
