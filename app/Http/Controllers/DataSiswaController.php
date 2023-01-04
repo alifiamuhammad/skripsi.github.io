@@ -63,7 +63,7 @@ public function store(Request $request)
                     
                 }  
 
-                
+
 public function kelas(Request $request)
     {
         $data['kelas'] = Kelas::where("jurusan_id", $request->jurusan_id)
@@ -71,8 +71,5 @@ public function kelas(Request $request)
   
         return response()->json($data);
     }
-                public function editdatasiswa($id)
-                {
-                  
-                }   
+             
 }
