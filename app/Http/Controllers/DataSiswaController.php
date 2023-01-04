@@ -9,6 +9,7 @@ use App\Models\kelas;
 use Illuminate\Support\Facades\Hash;
 class DataSiswaController extends Controller
 {
+    
     public function index()
 {
 	$posts = DataSiswa::sortable()->paginate();
@@ -23,6 +24,11 @@ public function detailsiswa($id){
             'post' => DataSiswa::find($id)
         ]);
         }
+         /**
+     * Write code on Method
+     *
+     * @return response()
+     */
     
 public function tambah_data_siswa(){
     $data['jurusan'] = Jurusan::get(["Nama_jurusan", "id"]);
@@ -63,7 +69,11 @@ public function store(Request $request)
                     
                 }  
 
-
+                 /**
+     * Write code on Method
+     *
+     * @return response()
+     */
 public function kelas(Request $request)
     {
         $data['kelas'] = Kelas::where("jurusan_id", $request->jurusan_id)
