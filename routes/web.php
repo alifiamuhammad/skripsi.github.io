@@ -25,3 +25,5 @@ Route::get('dt_siswa', [DataSiswaController::class, 'index']);
 Route::get('detailsiswa{id}', [DataSiswaController::class, 'detailsiswa']);
 Route::post('simpan-data-siswa',[DataSiswaController::class,'store']);
 Route::post('proses_login',[auth_controller::class,'proses_login']);
+Route::post('kelas', [DataSiswaController::class, 'kelas']);
+

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\DataSiswa;
+use App\Models\jurusan;
+use App\Models\kelas;
 use Illuminate\Support\Facades\Hash;
 class DataSiswaController extends Controller
 {
@@ -23,7 +25,8 @@ public function detailsiswa($id){
         }
     
 public function tambah_data_siswa(){
-    return view('tambah_data_siswa');
+    $data['jurusan'] = Jurusan::get(["Nama_jurusan", "id"]);
+        return view('tambah_data_siswa', $data);
                 }
 public function store(Request $request)
                 {
@@ -59,6 +62,15 @@ public function store(Request $request)
                     );
                     
                 }  
+
+                
+public function kelas(Request $request)
+    {
+        $data['kelas'] = Kelas::where("jurusan_id", $request->jurusan_id)
+                                ->get(["name", "id"]);
+  
+        return response()->json($data);
+    }
                 public function editdatasiswa($id)
                 {
                   

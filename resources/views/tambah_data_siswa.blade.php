@@ -1,5 +1,6 @@
 @extends('home')
 @section('homes')
+
 <div class="card">
     <h5 class="card-header">Tambah Data</h5>
     <div class="card-body">
@@ -26,13 +27,16 @@
         @enderror
           </div>
           <br>
-          <div class="form-group" style="width: 50%;">
-            <label for="Kelas">Kelas</label>
-            <input type="text" class="form-control" id="Kelas" aria-describedby="Kelas" name="Kelas"placeholder="Masukan Kelas">
-            @error('Nama')
-            <div class="text-danger alert-danger">{{ $message }}</div>
-        @enderror
-          </div>
+          <div class="form-group mb-3">
+            <select  id="country-dropdown" class="form-control">
+                <option value="">-- Pilih Jurusan --</option>
+                @foreach ($jurusan as $data)
+                <option value="{{$data->id}}">
+                    {{$data->Nama_Jurusan}}
+                </option>
+                @endforeach
+            </select>
+        </div>
           <br>
           <div class="form-group" style="width: 50%;">
             <label for="Email">Email</label>
@@ -49,13 +53,16 @@
             <div class="text-danger alert-danger">{{ $message }}</div>
         @enderror
           </div>
-
+          <br>
             <div class="form-group" style="width: 50%;">
               <label for="NoHP">password</label>
           <input type="password" class="form-control" id="password" placeholder="password" name="password" aria-describedby="password">
-     <span class="input-group-btn" id="eyeSlash">
-       <button class="btn btn-default reveal" onclick="visibility3()" type="button"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
-     </span>
+    </div>
+    <br>
+      <div class="form-group" style="width: 50%;">
+        <label for="NoHP">Upload foto</label>
+      <input type="file" class="form-control" id="customFile">
+      <label class="custom-file-label" for="customFile"></label>
     </div>
           <br>
           <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
@@ -77,6 +84,59 @@ if (x.type === 'password') {
   $('#eyeShow').hide();
   $('#eyeSlash').show();
 }
+
 }
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        $(document).ready(function () {
+            $('#country-dropdown').on('change', function () {
+                var idJurusan = this.value;
+                $("#state-dropdown").html('');
+                $.ajax({
+                    url: "{{url('kelas')}}",
+                    type: "POST",
+                    data: {
+                        country_id: idCountry,
+                        _token: '{{csrf_token()}}'
+                    },
+                    dataType: 'json',
+                    success: function (result) {
+                        $('#state-dropdown').html('<option value="">-- Select State --</option>');
+                        $.each(result.states, function (key, value) {
+                            $("#state-dropdown").append('<option value="' + value
+                                .id + '">' + value.name + '</option>');
+                        });
+                        $('#city-dropdown').html('<option value="">-- Select City --</option>');
+                    }
+                });
+            });
+  
+            /*------------------------------------------
+            --------------------------------------------
+            State Dropdown Change Event
+            --------------------------------------------
+            --------------------------------------------*/
+            $('#state-dropdown').on('change', function () {
+                var idState = this.value;
+                $("#city-dropdown").html('');
+                $.ajax({
+                    url: "{{url('api/fetch-cities')}}",
+                    type: "POST",
+                    data: {
+                        state_id: idState,
+                        _token: '{{csrf_token()}}'
+                    },
+                    dataType: 'json',
+                    success: function (res) {
+                        $('#city-dropdown').html('<option value="">-- Select City --</option>');
+                        $.each(res.cities, function (key, value) {
+                            $("#city-dropdown").append('<option value="' + value
+                                .id + '">' + value.name + '</option>');
+                        });
+                    }
+                });
+            });
+  
+        });
 </script>
 @endsection
+<meta name="csrf-token" content="{{ csrf_token() }}">
