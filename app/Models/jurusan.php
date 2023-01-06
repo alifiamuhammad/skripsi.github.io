@@ -9,6 +9,6 @@ class Jurusan extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'Nama_Jurusan',
+        'id','Nama_Jurusan',
     ];
 }

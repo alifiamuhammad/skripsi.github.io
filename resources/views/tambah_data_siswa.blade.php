@@ -28,7 +28,7 @@
           </div>
           <br>
           <div class="form-group mb-3">
-            <select  id="country-dropdown" class="form-control">
+            <select  id="country-dropdown" class="form-control"  name="Jurusan">
                 <option value="">-- Pilih Jurusan --</option>
                 @foreach ($jurusans as $data)
                 <option value="{{$data->id}}">
@@ -38,13 +38,10 @@
             </select>
         </div>
         <div class="form-group mb-3">
-          <select id="state-dropdown" class="form-control">
+          <select id="state-dropdown" class="form-control" name="Kelas">
           </select>
       </div>
-      <div class="form-group">
-        <select id="city-dropdown" class="form-control">
-        </select>
-    </div>
+      
           <br>
           <div class="form-group" style="width: 50%;">
             <label for="Email">Email</label>
@@ -67,11 +64,10 @@
           <input type="password" class="form-control" id="password" placeholder="password" name="password" aria-describedby="password">
     </div>
     <br>
-      <div class="form-group" style="width: 50%;">
-        <label for="NoHP">Upload foto</label>
-      <input type="file" class="form-control" id="customFile">
-      <label class="custom-file-label" for="customFile"></label>
-    </div>
+    <div class="form-group" style="width: 50%;">
+      <label for="NoHP">password</label>
+  <input type="password" class="form-control" id="password" placeholder="password" name="Foto" aria-describedby="password">
+</div>
           <br>
           <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
           

@@ -21,9 +21,15 @@ class dropdow extends Seeder
   
         Kelas::create(['jurusan_id' => $Jurusan->id, 'Nama' => 'XMIIA-1']);
         Kelas::create(['jurusan_id' => $Jurusan->id, 'Nama' => 'XMIIA-2']);
-  
         Kelas::create(['jurusan_id' => $Jurusan->id, 'Nama' => 'XMIIA-2']);
         Kelas::create(['jurusan_id' => $Jurusan->id, 'Nama' => 'XMIIA-3']);
+
+        $Jurusan = Jurusan::create(['Nama_Jurusan' => 'IIS']);
+  
+        Kelas::create(['jurusan_id' => $Jurusan->id, 'Nama' => 'XIIS-1']);
+        Kelas::create(['jurusan_id' => $Jurusan->id, 'Nama' => 'XIIS-2']);
+        Kelas::create(['jurusan_id' => $Jurusan->id, 'Nama' => 'XIIS-3']);
+        Kelas::create(['jurusan_id' => $Jurusan->id, 'Nama' => 'XIIS-4']);
   
   
   

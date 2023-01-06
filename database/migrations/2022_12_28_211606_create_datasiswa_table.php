@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('NIS');
             $table->string('Nama');
             $table->string('Alamat');
-            $table->string('Kelas');
+            $table->foreignId('Kelas_id');
             $table->string('Email');
-            $table->string('Jurusan');
+            $table->foreignId('Jurusan_id');
             $table->string('Foto');
             $table->string('NoHP');
             $table->timestamps();

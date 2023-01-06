@@ -19,8 +19,10 @@ class DataSiswa extends  Authenticatable
         'NIS',
         'Nama',
         'Alamat',
-        'Kelas',
+        'Kelas_id',
+        'Jurusan_id',
         'Email',
+        'Foto',
         'NoHP',
         'password',
         'level',
@@ -29,6 +31,12 @@ class DataSiswa extends  Authenticatable
         
 
     ];
+    public function jurusanx() {
+       return $this->belongsTo(Jurusan::class, 'Jurusan_id');
+
+    }
     public $sortable = ['NIS', 'Nama', 'Kelas'];
+
+   
    
 }

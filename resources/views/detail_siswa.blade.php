@@ -26,7 +26,12 @@
                     <label for="Email">Email</label>
                     <input type="email"  class="form-control" name="Email"  value="{{$post->Email}}" id="Email" placeholder="Email">
                   </div>
+                  <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="email"  class="form-control" name="Email"  value=" {{$datasiswa->Jurusan}}" id="Email" placeholder="Email">
+                  </div>
                   <br>
+                 
                   <div class="form-group">
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </div>

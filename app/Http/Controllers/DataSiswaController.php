@@ -40,7 +40,7 @@ public function store(Request $request)
                         'NIS'=> 'required|max:15',
                         'Nama'=> 'required',
                         'Alamat'=> 'required',
-                        'Kelas'=> 'required',
+                        'Kelas_id'=> 'required',
                         'Email'=> 'required',
                         'NoHP'=> 'required|max:13',
                     ]);
@@ -50,10 +50,10 @@ public function store(Request $request)
                         'NIS'     => $request->NIS,
                         'Nama'   => $request->Nama,
                         'Alamat' => $request->Alamat,
-                        'Kelas' => $request->Kelas,
+                        'Kelas_id' => $request->Kelas_id,
+                        'Foto' => $request->Foto,
                         'Email' => $request->Email,
-                        'Email' => $request->Jurusan,
-                        'Email' => $request->Kelas,
+                        'Jurusan_id' => $request->Jurusan_id,
                         'password' => Hash::make($request['password']),
                         'NoHP' => $request->NoHP,
                         
