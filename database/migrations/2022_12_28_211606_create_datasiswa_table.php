@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('Alamat');
             $table->string('Kelas');
             $table->string('Email');
-           
+            $table->string('Jurusan');
+            $table->string('Foto');
             $table->string('NoHP');
             $table->timestamps();
         });

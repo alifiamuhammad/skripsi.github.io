@@ -30,13 +30,21 @@
           <div class="form-group mb-3">
             <select  id="country-dropdown" class="form-control">
                 <option value="">-- Pilih Jurusan --</option>
-                @foreach ($jurusan as $data)
+                @foreach ($jurusans as $data)
                 <option value="{{$data->id}}">
                     {{$data->Nama_Jurusan}}
                 </option>
                 @endforeach
             </select>
         </div>
+        <div class="form-group mb-3">
+          <select id="state-dropdown" class="form-control">
+          </select>
+      </div>
+      <div class="form-group">
+        <select id="city-dropdown" class="form-control">
+        </select>
+    </div>
           <br>
           <div class="form-group" style="width: 50%;">
             <label for="Email">Email</label>
@@ -79,25 +87,26 @@
               var idJurusan = this.value;
               $("#state-dropdown").html('');
               $.ajax({
-                  url: "{{url('api/fetch-states')}}",
+                  url: "{{url('kelas')}}",
                   type: "POST",
                   data: {
-                      jurusan_id: idCountry,
+                      jurusan_id: idJurusan,
                       _token: '{{csrf_token()}}'
                   },
                   dataType: 'json',
-                  success: function (result) {
-                      $('#state-dropdown').html('<option value="">-- Select State --</option>');
-                      $.each(result.states, function (key, value) {
-                          $("#state-dropdown").append('<option value="' + value
-                              .id + '">' + value.name + '</option>');
-                      });
-                      $('#city-dropdown').html('<option value="">-- Select City --</option>');
-                  }
-              });
-          });
+                    success: function (result) {
+                        $('#state-dropdown').html('<option value="">-- Pilih Kelas --</option>');
+                        $.each(result.kelas, function (key, value) {
+                            $("#state-dropdown").append('<option value="' + value.id + '">' + value.Nama + '</option>');
+                        });
+                       
+                    }
+                });
+            });
 
-      });
- 
+          
+                    
+  
+        });
     </script>
 @endsection

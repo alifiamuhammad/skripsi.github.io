@@ -31,7 +31,7 @@ public function detailsiswa($id){
      */
     
 public function tambah_data_siswa(){
-    $data['jurusan'] = Jurusan::get(["Nama_jurusan", "id"]);
+    $data['jurusans'] = jurusan::get(["Nama_Jurusan", "id"]);
         return view('tambah_data_siswa', $data);
                 }
 public function store(Request $request)
@@ -52,6 +52,8 @@ public function store(Request $request)
                         'Alamat' => $request->Alamat,
                         'Kelas' => $request->Kelas,
                         'Email' => $request->Email,
+                        'Email' => $request->Jurusan,
+                        'Email' => $request->Kelas,
                         'password' => Hash::make($request['password']),
                         'NoHP' => $request->NoHP,
                         
@@ -69,15 +71,11 @@ public function store(Request $request)
                     
                 }  
 
-                 /**
-     * Write code on Method
-     *
-     * @return response()
-     */
+ 
 public function kelas(Request $request)
     {
-        $data['kelas'] = Kelas::where("jurusan_id", $request->jurusan_id)
-                                ->get(["name", "id"]);
+        $data['kelas'] = kelas::where("jurusan_id", $request->jurusan_id)
+                                ->get(["Nama", "id"]);
   
         return response()->json($data);
     }
