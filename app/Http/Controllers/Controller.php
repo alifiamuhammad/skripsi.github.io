@@ -11,3 +11,19 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
+public function store(Request $request)
+{
+  
+        $nm = $request->gambar;
+        $namaFile = $nm->getClientOriginalname();
+        $dtupload = new upload;
+        $dtupload->Nama=$request->Nama;
+        $dtupload->gambar=$namaFile;
+        $dtupload->deskripsi=$request->deskripsi;
+        $dtupload->OB=$request->OB;
+        $dtupload->waktu=$request->waktu;
+        $nm->move(public_path().'/img',$namaFile);
+        $dtupload->save();
+    
+    return redirect('Barang')->with('status','Data Berhasil Di Simpan!!');
+}
