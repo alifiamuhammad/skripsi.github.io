@@ -35,6 +35,10 @@ class DataSiswa extends  Authenticatable
        return $this->belongsTo(Jurusan::class, 'Jurusan_id');
 
     }
+    public function kelas() {
+        return $this->belongsTo(kelas::class, 'Kelas_id');
+ 
+     }
     public $sortable = ['NIS', 'Nama', 'Kelas'];
 
    

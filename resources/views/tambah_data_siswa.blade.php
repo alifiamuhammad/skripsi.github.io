@@ -13,7 +13,7 @@
           <br>
         <div class="form-group" style="width: 50%;">
             <label for="Nama">Nama</label>
-            <input type="text" class="form-control" id="Nama" name="Nama" aria-describedby="Nama" placeholder="Masukan Nama">
+            <input type="text" class="form-control" id="Nama" name="Nama" ariJa-describedby="Nama" placeholder="Masukan Nama">
             @error('Nama')
             <div class="text-danger alert-danger">{{ $message }}</div>
         @enderror
@@ -27,8 +27,9 @@
         @enderror
           </div>
           <br>
-          <div class="form-group mb-3">
-            <select  id="country-dropdown" class="form-control"  name="Jurusan">
+          <div class="form-group" style="width: 50%;">
+            <label for="Email">Jurusan</label>
+            <select  id="country-dropdown" class="form-control"  name="Jurusan_id">
                 <option value="">-- Pilih Jurusan --</option>
                 @foreach ($jurusans as $data)
                 <option value="{{$data->id}}">
@@ -37,11 +38,12 @@
                 @endforeach
             </select>
         </div>
-        <div class="form-group mb-3">
-          <select id="state-dropdown" class="form-control" name="Kelas">
+        <br>
+        <div class="form-group" style="width: 50%;">
+          <label for="Kelas">Kelas</label>
+          <select id="state-dropdown" class="form-control" name="Kelas_id" aria-describedby="Kelas" placeholder="Pilihan Kelas">
           </select>
       </div>
-      
           <br>
           <div class="form-group" style="width: 50%;">
             <label for="Email">Email</label>
@@ -65,9 +67,9 @@
     </div>
     <br>
     <div class="form-group" style="width: 50%;">
-      <label for="NoHP">password</label>
-  <input type="password" class="form-control" id="password" placeholder="password" name="Foto" aria-describedby="password">
-</div>
+      <label for="Foto" >Upload Foto Siswa</label>
+      <input class="form-control" type="file" id="Foto" placeholder="foto" name="Foto" aria-describedby="password">
+    </div>
           <br>
           <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
           

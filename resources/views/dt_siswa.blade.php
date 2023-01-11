@@ -140,7 +140,7 @@
                                 <td>{{$no++}}</td>
                               <td >{{$item->NIS}}</td>
                               <td >{{$item->Nama}}</td>
-                              <td >{{$item->Kelas}}</td>
+                              <td >{{$item->kelas->Nama}}</td>
                               <td> <ul class="list-inline m-0">
                                 <li class="list-inline-item">
                                   <a href="detailsiswa{{$item->id}}" class="btn btn-primary btn-sm rounded-circle" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-info"></i></button>
