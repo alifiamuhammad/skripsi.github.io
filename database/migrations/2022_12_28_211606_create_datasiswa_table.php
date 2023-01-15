@@ -21,7 +21,7 @@ return new class extends Migration
             $table->foreignId('Kelas_id');
             $table->string('Email');
             $table->foreignId('Jurusan_id');
-            $table->string('Foto');
+            $table->string('Foto')->nullable();
             $table->string('NoHP');
             $table->timestamps();
         });

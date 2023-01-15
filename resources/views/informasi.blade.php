@@ -10,7 +10,7 @@
                     <div class="row">
 
                         <div class="col align-self-start">
-                            <a class="btn btn-primary" href="tambah_data_siswa" role="button">Tambah data</a>
+                            <a class="btn btn-primary" href="tambah_Informasi" role="button">Tambah Informasi</a>
                           </div>
                           <div class="col-6 col-md-4">
                             <div class="input-group" style="width: 350px;">
@@ -22,35 +22,34 @@
                 </div>
                     
                     <br>
-                  <table class="table table-bordered  ">
-                    <thead class="thead-dark">
+                  <table class="table table-bordered">
+                    <thead class="bg-dark text-white text-center">
                             <tr>
                               <th scope="col">No</th>
-                              <th scope="col">@sortablelink('NIS','NIS')</th>
-                              <th scope="col">@sortablelink('Nama')</th>
-                              <th scope="col">@sortablelink('Kelas')</th>
+                              <th scope="col">Judul</th>
                               <th scope="col">Action</th>
                             </tr>
                           </thead>
                           <tbody>
                             <?php $no=1;?>
-                            @foreach ($data as $item)
+                         
                             <tr>
-                                <td>{{$no++}}</td>
-                              <td >{{$item->NIS}}</td>
-                              <td >{{$item->Nama}}</td>
-                              <td >{{$item->kelas->Nama}}</td>
-                              <td> <ul class="list-inline m-0">
+                                <td class="text-center">{{$no++}}</td>
+                              <td >
+                                
+                              </td>
+                              <td class="text-center"> 
+                                <ul class="list-inline m-0">
                                 <li class="list-inline-item">
-                                  <a href="detailsiswa{{$item->id}}" class="btn btn-primary btn-sm rounded-circle" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-info"></i></button>
+                                  <a href="" class="btn btn-primary btn-sm rounded-circle " type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-info"></i></button>
                                 </li></a>
-                                <li class="list-inline-item">
-                                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                                <li class="list-inline-item ">
+                                    <button class="btn btn-danger btn-sm rounded-0 " type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
                                 </li>
                             </ul></td>
                             
                             </tr>
-                            @endforeach
+                            
                         </tbody>
                         </table>
                 </div>

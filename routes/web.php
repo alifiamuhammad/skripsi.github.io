@@ -4,6 +4,7 @@ use App\Http\Controllers\route_controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataSiswaController;
 use App\Http\Controllers\auth_controller;
+use App\Http\Controllers\Informasi_controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,4 +27,6 @@ Route::get('detailsiswa{id}', [DataSiswaController::class, 'detailsiswa']);
 Route::post('simpan-data-siswa',[DataSiswaController::class,'store']);
 Route::post('proses_login',[auth_controller::class,'proses_login']);
 Route::post('kelas', [DatasiswaController::class,'kelas']);
-
+Route::get('informasi', [Informasi_controller::class,'informasi']);
+Route::get('tambah_Informasi', [Informasi_controller::class,'tambah_informasi']);
+Route::post('tambah_data_informasi', [Informasi_controller::class,'store']);

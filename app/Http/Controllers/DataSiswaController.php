@@ -45,13 +45,15 @@ public function store(Request $request)
                         'NoHP'=> 'required|max:13',
                     ]);
 
-
+                    $nm = $request->Foto;
+                    $namaFile = $nm->getClientOriginalname();
+                    $nm->move(public_path().'/images',$namaFile);
                     DataSiswa::create([
                         'NIS'     => $request->NIS,
                         'Nama'   => $request->Nama,
                         'Alamat' => $request->Alamat,
                         'Kelas_id' => $request->Kelas_id,
-                        'Foto' => $request->Foto,
+                        'Foto' => $request->Foto=$namaFile,
                         'Email' => $request->Email,
                         'Jurusan_id' => $request->Jurusan_id,
                         'password' => Hash::make($request['password']),

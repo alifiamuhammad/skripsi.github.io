@@ -1,6 +1,5 @@
 @extends('home')
 @section('homes')
-
 <div class="card">
     <h5 class="card-header">Tambah Data</h5>
     <div class="card-body">
@@ -77,6 +76,7 @@
        
     </div>
   </div>
+
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>

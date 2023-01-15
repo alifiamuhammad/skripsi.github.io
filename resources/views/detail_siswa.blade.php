@@ -1,13 +1,15 @@
-@extends('home')
+@extends('template')
 
 @section('homes')
+
+<div class="col py-3"> 
 <div class="card">
     <h5 class="card-header">Featured</h5>
     <br>
     <div class="card-body">
-               <div class="row">
+               <div class="row"> 
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="...">
+                    <img src="{{ asset('images/'.$post->Foto) }}" height="315px" width="315px" alt="...">
                 </div>
                 <form class="mb-3 col">
                   <div class="form-group">

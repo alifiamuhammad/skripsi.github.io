@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 use Kyslik\ColumnSortable\Sortable;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 
 class DataSiswa extends  Authenticatable
 {
@@ -39,6 +40,15 @@ class DataSiswa extends  Authenticatable
         return $this->belongsTo(kelas::class, 'Kelas_id');
  
      }
+     public function Foto()
+     {
+         if (!$this->Foto['Foto']) {
+             return '/images/sa.png';
+         }
+ 
+         return $this->Foto['Foto'];
+     }
+
     public $sortable = ['NIS', 'Nama', 'Kelas'];
 
    

@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('datasiswa', function (Blueprint $table) {
-          
-            $table->string('Foto');
+        Schema::create('informasi', function (Blueprint $table) {
+            $table->id();
+            $table->string('Judul');
+            $table->string('file');
         });
     }
 
@@ -26,8 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('datasiswa', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('informasi');
     }
 };
