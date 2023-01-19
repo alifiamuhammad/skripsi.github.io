@@ -18,12 +18,12 @@ class cek_login
     public function handle(Request $request, Closure $next,$role)
     {
         if (!Auth::check()) {
-            return redirect('welcome');
+            return redirect('');
         }
         $user = Auth::user();
         if ($user->level==$role){
             return$next($request);
         }
-       return redirect('welcome')->with('error', "Akses di tolak");
+       return redirect('/')->with('error', "Akses di tolak");
     }
 }

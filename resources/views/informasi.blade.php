@@ -1,6 +1,8 @@
 @extends('template')
+
 @section('homes')
-    
+
+
 
             <div class="card align-self-center gx-5">
                 <div class="card-header ">
@@ -32,16 +34,15 @@
                           </thead>
                           <tbody>
                             <?php $no=1;?>
-                         
+                            @foreach ($data as $data)
                             <tr>
                                 <td class="text-center">{{$no++}}</td>
-                              <td >
-                                
+                              <td class="text-center">{{$data->Judul}}
                               </td>
                               <td class="text-center"> 
                                 <ul class="list-inline m-0">
                                 <li class="list-inline-item">
-                                  <a href="" class="btn btn-primary btn-sm rounded-circle " type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-info"></i></button>
+                                  <a href="" class="btn btn-primary btn-sm rounded-circle " type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="bi bi-download"></i></button>
                                 </li></a>
                                 <li class="list-inline-item ">
                                     <button class="btn btn-danger btn-sm rounded-0 " type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
@@ -49,7 +50,7 @@
                             </ul></td>
                             
                             </tr>
-                            
+                            @endforeach
                         </tbody>
                         </table>
                 </div>

@@ -2,14 +2,13 @@
 @section('homes')
     
 
-            <div class="card align-self-center gx-5">
-                <div class="card-header ">
-                 <h4>Featured</h4> 
+            <div class="card align-self-center gx-5  border-dark">
+                <div class="card-header  border-dark ">
+                 <h4>Data Siswa</h4> 
                 </div>
                 <div class="card-body">
                     <div class="row">
-
-                        <div class="col align-self-start">
+                      <div class="col align-self-start">
                             <a class="btn btn-primary" href="tambah_data_siswa" role="button">Tambah data</a>
                           </div>
                           <div class="col-6 col-md-4">
@@ -28,7 +27,7 @@
                               <th scope="col">No</th>
                               <th scope="col">@sortablelink('NIS','NIS')</th>
                               <th scope="col">@sortablelink('Nama')</th>
-                              <th scope="col">@sortablelink('Kelas')</th>
+                              <th scope="col">@sortablelink('Kelas_id','kelas')</th>
                               <th scope="col">Action</th>
                             </tr>
                           </thead>
@@ -63,7 +62,7 @@
     
 @endsection
           
-        
+@include('sweetalert::alert')  
 
 </body>
 </html>

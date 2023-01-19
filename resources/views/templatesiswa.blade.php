@@ -12,22 +12,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        .center {
-          margin: auto;
-          padding: 2px;
-        }
-        </style>
 </head>
 
-<nav class="navbar navbar-dark bg-secondary ">
+<nav class="navbar navbar-dark bg-secondary">
     <div class="container-fluid">
-        <div class="center">
-            <img src="{{URL::asset('/images/logo.png')}}" width="40" 
-            height="40" class="rounded " alt="...">
-            <a class="navbar-brand" href="home1">SISTEM INFROMASI AKADEMIK SMA KARTIKA XIX-1 BANDUNG</a>
-        </div>
-     
+      <a class="navbar-brand" href="home1">Navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">  <span class="navbar-toggler-icon"></span></button>
     </div>
     <div class="offcanvas offcanvas-end bg-dark" style="width: 250px;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasExampleLabel">
@@ -56,60 +45,28 @@
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
               
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                    <li class="nav-item">
-                        
-                    </li>
+                  
                     <li>
-                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-white">
-                            <i class="bi bi-people"></i> <span class="ms-1 d-none d-sm-inline">Data Master</span>  <i class="fa fa-caret-down"></i> </a>
-
-                        <ul class="collapse  nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                            <li class="w-100">
-                                <a href="dt_siswa" class="nav-link px-0"> <span class="d-none d-sm-inline">Data Siswa</span></a>
-                            </li>
-                            <li>
-                                <a href="data_guru" class="nav-link px-0"> <span class="d-none d-sm-inline">Data Guru</span></a>
-                            </li>
-                            <li>
-                                <a href="data_kelas" class="nav-link px-0"> <span class="d-none d-sm-inline">Data Kelas</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                   
-                    <li>
-                        <a href="data_absen" class="nav-link px-0 align-middle text-white">
-                            <i class=" bi bi-calendar3"></i></i> <span class="ms-1 d-none d-sm-inline">Absensi Siswa</span></a>
-                    </li>
-                   
-                    <li>
-                        <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-white ">
-                            <i class=" bi bi-clipboard2-check"></i> <span class="ms-1 d-none d-sm-inline">Nilai</span> <i class="fa fa-caret-down"></i></a>
-
-                        <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                            <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Rekap Nilai Siswa</span> </a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Nilai Siswa</span></a>
-                            </li>
-                        </ul>
+                        <a href="nilai" class="nav-link px-0 align-middle text-white">
+                            <i class="bi bi-book"></i></i> <span class="ms-1 d-none d-sm-inline">Nilai</span></a>
                     </li>
                     <li>
                         <a href="informasi" class="nav-link px-0 align-middle text-white">
                             <i class="bi bi-file-earmark-text"></i></i> <span class="ms-1 d-none d-sm-inline">Informasi</span></a>
-                            
                     </li>
                     <li>
-                        <a href="Document" class="nav-link px-0 align-middle text-white">
-                            <i class="bi bi-files"></i></i> <span class="ms-1 d-none d-sm-inline">Document</span></a>
-                            
+                        <a href="informasi" class="nav-link px-0 align-middle text-white">
+                            <i class="bi bi-file-earmark-text"></i></i> <span class="ms-1 d-none d-sm-inline">Informasi</span></a>
                     </li>
+                
+                </ul>
+                <hr>
                 
             </div>
         </div>
       
          <div class="col py-3">
-          @yield('homes')
+          @yield('homesiswa')
                 </div>
               </div>
         </div>

@@ -14,38 +14,33 @@
                 <form class="mb-3 col">
                   <div class="form-group">
                     <label for="NIS">NIS</label>
-                    <input type="number" class="form-control" value="{{$post->NIS}}" readonly id="NIS" aria-describedby="emailHelp" placeholder="NIS">
+                    <input type="number" class="form-control" value="{{$post->NIS}}" id="NIS" aria-describedby="emailHelp" placeholder="NIS">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Nama</label>
-                    <input type="text" class="form-control" value="{{$post->Nama}}" readonly id="exampleInputPassword1" placeholder="Password">
+                    <input type="text" class="form-control" value="{{$post->Nama}}" id="exampleInputPassword1" placeholder="Password">
                   </div>
                   <div class="form-group">
                     <label for="Alamat">Alamat</label>
-                    <input type="text" class="form-control" value="{{$post->Alamat}}" readonly id="Alamat" placeholder="Alamat">
+                    <input type="text" class="form-control" value="{{$post->Alamat}}" id="Alamat" placeholder="Alamat">
                   </div>
                   <div class="form-group">
                     <label for="Email">Email</label>
-                    <input type="email"  class="form-control arrow-togglable" readonly name="Email"  value="{{$post->Email}}" id="Email" placeholder="Email">
+                    <input type="email"  class="form-control arrow-togglable" name="Email"  value="{{$post->Email}}" id="Email" placeholder="Email">
                   </div>
                   <div class="Jurusan">
                     <label for="Email">Email</label>
-                    <input type="email"  class="form-control arrow-togglable" readonly name="Kelas_id"  value=" {{$post->kelas->Nama}}" id="Email" placeholder="Email">
+                    <input type="email"  class="form-control arrow-togglable" name="Kelas_id"  value=" {{$post->kelas->Nama}}" id="Email" placeholder="Email">
                   </div>
                   <br>
                 
-                
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
                   
                 </form>
-                <div class="row">
-                  <div class="col">
-                    <a class="btn btn-primary" href="dt_siswa" role="button">Kembali</a>
-                  </div>
-                  <div class="col-auto">
-                    <a class="btn btn-primary" href="update_data_siswa{{$post->NIS}}" role="button">Update</a>
-                  </div>
-                </div>
-               
+              
+                 
             
                   </div>
     </div>

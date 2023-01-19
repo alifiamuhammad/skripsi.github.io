@@ -17,11 +17,10 @@ class auth_controller extends Controller
             ]);
             if(Auth::guard('datasiswa')->attempt(['NIS' => $request->NIS, 'password' => $request->password])){
                 return  redirect('home2');
-            }elseif(Auth::guard('user')->attempt(['NIS' => $request->NIS, 'password' => $request->password])){
-                return redirect('home1');
+            }elseif(Auth::guard('data_gurus')->attempt(['NIP' => $request->NIP, 'password' => $request->password])){
+                return redirect('home3');
+            
             }
-           
-           
         
         return redirect('/')
         ->withInput()

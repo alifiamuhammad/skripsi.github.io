@@ -15,8 +15,8 @@
           </div>
           <br>
     <div class="form-group" style="width: 50%;">
-      <label for="File" >Upload File</label>
-      <input class="form-control" type="file" id="File" placeholder="File" name="File" aria-describedby="File">
+      <label for="file" >Upload File</label>
+      <input class="form-control" type="file" id="file" placeholder="file" name="file" aria-describedby="file">
     </div>
           <br>
           <button type="submit" class="btn btn-md btn-primary">Tambah</button>

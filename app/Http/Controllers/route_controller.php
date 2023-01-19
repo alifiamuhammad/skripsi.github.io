@@ -11,7 +11,7 @@ class route_controller extends Controller
         return view('home');
             }
             public function homes(){
-                return view('dd');
+                return view('homesiswa');
                     }
     
   

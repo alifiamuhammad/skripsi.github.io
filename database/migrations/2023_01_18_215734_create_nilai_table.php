@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('informasi', function (Blueprint $table) {
+        Schema::create('nilai', function (Blueprint $table) {
             $table->id();
-            $table->string('Judul');
-            $table->string('file');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informasi');
+        Schema::dropIfExists('nilai');
     }
 };

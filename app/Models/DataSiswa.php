@@ -40,16 +40,8 @@ class DataSiswa extends  Authenticatable
         return $this->belongsTo(kelas::class, 'Kelas_id');
  
      }
-     public function Foto()
-     {
-         if (!$this->Foto['Foto']) {
-             return '/images/sa.png';
-         }
  
-         return $this->Foto['Foto'];
-     }
-
-    public $sortable = ['NIS', 'Nama', 'Kelas'];
+    public $sortable = ['NIS', 'Nama', 'Kelas_id'];
 
    
    

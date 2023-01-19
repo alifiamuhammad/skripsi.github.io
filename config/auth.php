@@ -44,6 +44,10 @@ return [
             'driver'  => 'session',
             'provider' => 'datasiswa',
           ],
+          'data_gurus'  => [
+            'driver'  => 'session',
+            'provider' => 'data_gurus',
+          ],
           'user'  => [
             'driver'  => 'session',
             'provider' => 'users',
@@ -75,6 +79,10 @@ return [
         'datasiswa' => [
             'driver' => 'eloquent',
             'model'  => App\Models\DataSiswa::class,
+        ],
+        'data_gurus' => [
+            'driver' => 'eloquent',
+            'model'  => App\Models\DataGuru::class,
         ],
         
         // 'users' => [
