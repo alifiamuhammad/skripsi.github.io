@@ -1,5 +1,5 @@
-@extends('template')
-@section('homes')
+@extends('templateguru')
+@section('homeguru')
 <div class="card position-absolute bottom-0"  style="width: 80%; height: 35%;">
     <h5 class="card-header bg-dark text-white">Informasi</h5>
     <div class="card-body overflow-auto">

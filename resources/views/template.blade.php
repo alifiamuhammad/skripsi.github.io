@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>SIAKAD</title>
     <style>
         .center {
           margin: auto;
@@ -36,18 +36,17 @@
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <div class="dropdown mt-3">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-            Dropdown button
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item ">
+                  <a class="nav-link active font-weight-bold " style="font-weight:bold" aria-current="page" href="logout">Logout  <i class="bi bi-box-arrow-right"></i></a>
+                </li>
+        </ul>
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item ">
+              <a class="nav-link active  " style="font-weight:bold" aria-current="page" href="logout">Setting  <i class="bi bi-gear"></i></a>
+            </li>
+    </ul>
+          
   </nav>
  
 <body><div class="container-fluid">
@@ -73,12 +72,14 @@
                             <li>
                                 <a href="data_kelas" class="nav-link px-0"> <span class="d-none d-sm-inline">Data Kelas</span></a>
                             </li>
+                            <li>
+                                <a href="data_jurusan" class="nav-link px-0"> <span class="d-none d-sm-inline">Data Jurusan</span></a>
+                            </li>
                         </ul>
                     </li>
                    
                     <li>
-                        <a href="data_absen" class="nav-link px-0 align-middle text-white">
-                            <i class=" bi bi-calendar3"></i></i> <span class="ms-1 d-none d-sm-inline">Absensi Siswa</span></a>
+                       
                     </li>
                    
                     <li>

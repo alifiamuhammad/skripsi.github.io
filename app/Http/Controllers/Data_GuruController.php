@@ -13,7 +13,9 @@ class Data_GuruController extends Controller
      */
     public function index()
     {
-        //
+       
+  
+    return view('dt_guru');
     }
 
     /**

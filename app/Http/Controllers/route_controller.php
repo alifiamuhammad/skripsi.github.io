@@ -13,6 +13,12 @@ class route_controller extends Controller
             public function homes(){
                 return view('homesiswa');
                     }
+                    public function homeguru(){
+                        return view('homeguru');
+                            }
+                            public function error(){
+                                return view('ss');
+                                    }
     
   
 

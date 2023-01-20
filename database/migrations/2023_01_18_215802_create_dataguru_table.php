@@ -10,7 +10,7 @@ return new class extends Migration
      * Run the migrations.
      *
      * @return void
-     */
+     */ 
     public function up()
     {
         Schema::create('data_gurus', function (Blueprint $table) {
@@ -20,10 +20,13 @@ return new class extends Migration
             $table->string('Alamat');
             $table->string('Email');
             $table->string('NoHP');
+            $table->foreignId('id_Mapel');
+            $table->string('Password');
+            $table->string('Foto');
             $table->timestamps();
         });
     }
-
+ 
     /**
      * Reverse the migrations.
      *

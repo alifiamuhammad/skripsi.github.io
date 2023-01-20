@@ -17,13 +17,19 @@ class auth_controller extends Controller
             ]);
             if(Auth::guard('datasiswa')->attempt(['NIS' => $request->NIS, 'password' => $request->password])){
                 return  redirect('home2');
-            }elseif(Auth::guard('data_gurus')->attempt(['NIP' => $request->NIP, 'password' => $request->password])){
-                return redirect('home3');
+          
             
             }
         
         return redirect('/')
         ->withInput()
         ->withErrors(['login_gagal' => 'Username atau Password anda salah']);
+}
+public function logout(Request $request)
+{
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect('/');
 }
 }
